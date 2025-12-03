@@ -418,7 +418,8 @@ plt.ylabel("Magnitude (dB)")
 plt.title("Multi-band FIR (Kaiser, all-math, scaled): bands, sum, and noise floors")
 plt.ylim([-160, 10])
 plt.grid(True, which="both", ls=":")
-plt.xlim(0, 20000)   # hard cut at 20 kHz
+plt.xlim(0, 25000)   # hard cut at 20 kHz
 plt.legend(loc="upper right", ncol=2, fontsize=8)
 plt.tight_layout()
 plt.show()
+ 
