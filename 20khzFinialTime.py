@@ -285,16 +285,16 @@ print(f"\nGlobal gain g_global2 = {g_global2:.6f} ({g_global2_db:.3f} dB)")
 
 coeffs_final = coeffs_tapered * g_global2
 design_eq_db = np.array([
-    -10,  # Band0  (example: pull low end down 1.5 dB)
+    -5.2,  # Band0  (example: pull low end down 1.5 dB)
     -1.0,  # Band1
     -0.5,  # Band2
      -5,  # Band3
-     0.0,  # Band4
-     -4,  # Band5
-     -3,  # Band6
-     0.0,  # Band7
-     0.0,  # Band8
-     0.0,  # Band9
+     -3,  # Band4
+     -3,  # Band5
+     -2.5,  # Band6
+     -1.5,  # Band7
+     -.8,  # Band8
+     -.3,  # Band9
      0.0,  # Band10
      0.0,  # Band11
      0.0,  # Band19
@@ -419,6 +419,6 @@ plt.title("Multi-band FIR (Kaiser, all-math, scaled): bands, sum, and noise floo
 plt.ylim([-160, 10])
 plt.grid(True, which="both", ls=":")
 plt.xlim(0, 20000)   # hard cut at 20 kHz
-plt.legend(loc="lower left", ncol=2, fontsize=8)
+plt.legend(loc="upper right", ncol=2, fontsize=8)
 plt.tight_layout()
 plt.show()
